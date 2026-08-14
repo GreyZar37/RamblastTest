@@ -1,6 +1,6 @@
 name: Art Asset Request
 description: Request a new art / animation / VFX asset for the project
-title: "[ASSET] "
+title: "[Art ASSET] "
 labels: ["asset-request"]
 body:
   - type: input
@@ -96,11 +96,3 @@ body:
       description: Where should the final asset be submitted, and how? Link to guide if relevant.
     validations:
       required: true
-
-  - type: textarea
-    id: submission-workfile
-    attributes:
-      label: Submission - Work File
-      description: Where should the work file be submitted, and how?
-    validations:
-      required: false
