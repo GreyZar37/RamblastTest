@@ -1,0 +1,106 @@
+name: Asset Request
+description: Request a new art / animation / VFX asset for the project
+title: "[ASSET] "
+labels: ["asset-request"]
+body:
+  - type: input
+    id: task-name
+    attributes:
+      label: Task Name
+      description: Short and descriptive
+      placeholder: e.g. Fire Elemental - Attack VFX
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Detailed Description
+      description: Keep it short, sweet, and to the point. What is the purpose of the asset?
+      placeholder: What is this asset for, and why is it needed?
+    validations:
+      required: false
+
+  - type: dropdown
+    id: new-or-existing
+    attributes:
+      label: New or Existing?
+      description: Is this a new asset, or being added to an existing set/system?
+      options:
+        - New
+        - Added to existing set/system
+    validations:
+      required: true
+
+  - type: textarea
+    id: style-guide
+    attributes:
+      label: Style Pointers / Guide
+      description: Link or attach reference / existing asset it should match
+      placeholder: e.g. Should match the style of [link], see attached reference image
+    validations:
+      required: false
+
+  - type: textarea
+    id: extra-details
+    attributes:
+      label: Additional Details
+      description: Anything not covered by the fields below
+    validations:
+      required: false
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category
+      options:
+        - 3D
+        - 2D
+        - Animation
+        - VFX
+        - Other
+    validations:
+      required: true
+
+  - type: input
+    id: asset-type
+    attributes:
+      label: Type of Asset
+      description: e.g. Sprite, Splash Art, Icon, Character, Environment, Prop
+      placeholder: e.g. Character
+    validations:
+      required: true
+
+  - type: input
+    id: file-format
+    attributes:
+      label: File Format
+      description: Format of final asset / work file
+      placeholder: e.g. .png (final), .psd (work file)
+    validations:
+      required: true
+
+  - type: input
+    id: resolution
+    attributes:
+      label: Resolution
+      description: Only relevant for 2D assets, textures, etc.
+      placeholder: e.g. 1024 x 1024 px
+    validations:
+      required: false
+
+  - type: textarea
+    id: submission-final
+    attributes:
+      label: Submission - Final Asset
+      description: Where should the final asset be submitted, and how? Link to guide if relevant.
+    validations:
+      required: true
+
+  - type: textarea
+    id: submission-workfile
+    attributes:
+      label: Submission - Work File
+      description: Where should the work file be submitted, and how?
+    validations:
+      required: false
